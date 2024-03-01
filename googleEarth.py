@@ -21,7 +21,6 @@ def meters_to_long_change(meters, lat):
 class Object:
     def vector(name, lat, long, i, j, k1=0, k2=0):
         kml = simplekml.Kml()
-        kml.document = simplekml.Folder(name = "Vectors")
         point = kml.newlinestring()
         point.name = name
         delta_lat = meters_to_lat_change(i)
@@ -38,7 +37,6 @@ class Object:
 
     def freefall(lat, long, height, name, duration, intervals=100):
         kml = simplekml.Kml()
-        kml.document = simplekml.Folder(name = "Freefall Points")
         start_time = datetime.utcnow()
         previous_time = None
         previous_height = None
@@ -70,7 +68,6 @@ class Object:
 
     def horizontal_projection(lat, long, height, name, duration):
         kml = simplekml.Kml()
-        kml.document = simplekml.Folder(name = "kml_files")
         newPoint = kml.newpoint(name=name)
         newPoint.coords = [(lat, long, height)]
         newPoint.altitudemode = simplekml.AltitudeMode.relativetoground
@@ -86,7 +83,7 @@ class Object:
         # Use TimeSpan for duration instead of TimeStamp
         newPoint.timespan.begin = start_time_str
         newPoint.timespan.end = end_time_str
-        kml.save("/kml_files/horizontal_projection_" + name + ".kml")
+        kml.save("horizontal_projection_" + name + ".kml")
     
 start_lat = 38.66246307880478
 start_long = -121.1256435949286
