@@ -30,6 +30,7 @@ jobs:
     - name: Analysing the code with pylint
       run: |
         pylint --generate-rcfile > ~/.pylintrc
+        echo [MESSAGES CONTROL]  > ~/.pylintrc
         echo disable=C0103 > ~/.pylintrc
         cat ~/.pylintrc
         find . -type f -name "*.py" | xargs pylint 
