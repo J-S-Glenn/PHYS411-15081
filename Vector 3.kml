@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
+    <Document id="726">
+        <Style id="729">
+            <IconStyle id="731">
+                <colorMode>normal</colorMode>
+                <scale>0.5</scale>
+                <heading>0</heading>
+                <Icon id="732">
+                    <href>http://maps.google.com/mapfiles/kml/shapes/donut.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle id="730">
+                <colorMode>normal</colorMode>
+                <scale>0.6</scale>
+            </LabelStyle>
+        </Style>
+        <Placemark id="728">
+            <name>Vector 3</name>
+            <styleUrl>#729</styleUrl>
+            <LineString id="727">
+                <altitudeMode>relativeToGround</altitudeMode>
+                <coordinates>-121.12449127762292,38.66268802234395,200 -121.12564359710035,38.66232811268127,100</coordinates>
+            </LineString>
+        </Placemark>
+    </Document>
+</kml>
